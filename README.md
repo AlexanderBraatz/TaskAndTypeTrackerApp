@@ -1,50 +1,24 @@
-# Task and Type Tracker App
+# New Project
 
-This is a To-Do app built with TypeScript.
+> ✨ Bootstrapped with Create Snowpack App (CSA).
 
-## Quick Start
+## Available Scripts
 
-To clone and use the project, follow these steps:
+### npm start
 
-1. Clone the repository:
+Runs the app in the development mode.
+Open http://localhost:8080 to view it in the browser.
 
-   ```bash
-   git clone https://github.com/AlexanderBraatz/TaskAndTypeTrackerApp.git
-   ```
+The page will reload if you make edits.
+You will also see any lint errors in the console.
 
-2. Navigate to the project directory:
+### npm run build
 
-   ```bash
-   cd TaskAndTypeTrackerApp
-   ```
+Builds a static copy of your site to the `build/` folder.
+Your app is ready to be deployed!
 
-3. Install the dependencies:
+**For the best production performance:** Add a build bundler plugin like [@snowpack/plugin-webpack](https://github.com/snowpackjs/snowpack/tree/main/plugins/plugin-webpack) or [snowpack-plugin-rollup-bundle](https://github.com/ParamagicDev/snowpack-plugin-rollup-bundle) to your `snowpack.config.mjs` config file.
 
-   ```bash
-   npm install
-   ```
+### Q: What about Eject?
 
-4. Build the project:
-
-   ```bash
-   npm run build
-   ```
-
-5. Start the app:
-
-   ```bash
-   npm start
-   ```
-
-6. Open your browser and visit `http://localhost:3000` to access the app.
-
-## Features
-
-- Add tasks
-- Mark tasks as completed
-
-## Technologies Used
-
-- TypeScript
-- CSS
-- HTML
+No eject needed! Snowpack guarantees zero lock-in, and CSA strives for the same.
