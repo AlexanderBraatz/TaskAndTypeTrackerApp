@@ -44,8 +44,16 @@ form?.addEventListener('submit', e => {
 	console.log('newTask:', newTask); // test the newTask object
 
 	addListItem(newTask);
+	input.value = '';
 });
 
 function addListItem(task: Task) {
-	console.log(task);
+	const item = document.createElement('li');
+	const label = document.createElement('label');
+	const checkbox = document.createElement('input');
+	checkbox.type = 'checkbox';
+	checkbox.checked = task.completed;
+	item.append(checkbox, task.title);
+	item.append(label);
+	list?.append(item);
 }
