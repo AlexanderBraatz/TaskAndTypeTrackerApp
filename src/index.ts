@@ -1,5 +1,12 @@
 import { v4 as uuidV4 } from 'uuid';
 
+type Task = {
+	id: string;
+	title: string;
+	completed: boolean;
+	createdAt: Date;
+};
+
 console.log(uuidV4());
 console.log('Hello World!');
 
@@ -35,4 +42,10 @@ form?.addEventListener('submit', e => {
 	};
 
 	console.log('newTask:', newTask); // test the newTask object
+
+	addListItem(newTask);
 });
+
+function addListItem(task: Task) {
+	console.log(task);
+}
