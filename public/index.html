@@ -14,22 +14,24 @@
 			type="module"
 			src="/dist/index.js"
 		></script>
+		<link
+			rel="stylesheet"
+			href="style.css"
+		/>
 		<title>Document</title>
-		<style>
-			#list {
-				list-style: none;
-				padding: 0;
-			}
-		</style>
 	</head>
 	<body>
-		<ul id="list"></ul>
-		<form id="new-task-form">
-			<input
-				type="text"
-				id="new-task-title"
-			/>
-			<button type="submit">Add</button>
-		</form>
+		<div id="app">
+			<h1>Todo List</h1>
+			<p>What tasks do you need to compleat today?</p>
+			<form id="new-task-form">
+				<input
+					type="text"
+					id="new-task-title"
+				/>
+				<button type="submit">Add</button>
+			</form>
+			<ul id="list"></ul>
+		</div>
 	</body>
 </html>
