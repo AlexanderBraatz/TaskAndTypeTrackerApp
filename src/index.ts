@@ -7,9 +7,6 @@ type Task = {
 	createdAt: Date;
 };
 
-console.log(uuidV4());
-console.log('Hello World!');
-
 // CODE BELOW gets html elements and tells typescript what type of element it is
 
 // this code gets html elements and tells typescript what type of element it is
@@ -20,10 +17,11 @@ const form = document.getElementById('new-task-form') as HTMLFormElement | null;
 
 const input = document.querySelector<HTMLInputElement>('#new-task-title');
 
-// CODE BELOW tests the selectors
-console.log('list:', list);
-console.log('form:', form);
-console.log('input:', input);
+// CODE BELOW creates an array of tasks
+const tasks: Task[] = loadTasks();
+tasks.forEach(task => {
+	addListItem(task);
+});
 
 //CODE BELOW adds an event listener to the form
 
@@ -51,9 +49,26 @@ function addListItem(task: Task) {
 	const item = document.createElement('li');
 	const label = document.createElement('label');
 	const checkbox = document.createElement('input');
+	checkbox.addEventListener('change', e => {
+		task.completed = checkbox.checked;
+		saveTasks();
+	});
 	checkbox.type = 'checkbox';
 	checkbox.checked = task.completed;
 	item.append(checkbox, task.title);
 	item.append(label);
 	list?.append(item);
+
+	tasks.push(task);
+}
+function saveTasks() {
+	localStorage.setItem('TASKS', JSON.stringify(tasks));
+}
+
+function loadTasks(): Task[] {
+	const taskJSON = localStorage.getItem('TASKS');
+	if (taskJSON === null) {
+		return [];
+	}
+	return JSON.parse(taskJSON);
 }
