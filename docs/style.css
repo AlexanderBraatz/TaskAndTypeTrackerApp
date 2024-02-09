@@ -1,0 +1,94 @@
+body {
+	box-sizing: border-box;
+	background-color: #f4f4f4;
+	color: #333;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	min-height: 100vh;
+	font-family: 'Courier New', Courier, monospace;
+}
+
+#app {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: lightgray;
+	padding: 0 20px;
+	border-radius: 20px;
+	box-shadow: inset 0 0 10px #000000;
+	margin-top: 40px;
+}
+h1 {
+	font-family: 'Courier New', Courier, monospace;
+	font-size: 60px;
+	text-decoration: underline;
+}
+
+p {
+	font-size: 20px;
+	font-weight: bold;
+}
+
+#new-task-form {
+	display: flex;
+	justify-content: flex-start;
+}
+
+#new-task-title {
+	padding: 10px;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	width: 200px;
+}
+
+button {
+	background-color: #3178c6;
+	color: white;
+	border: none;
+	padding: 10px 20px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+button:hover {
+	background-color: #00273f;
+}
+
+#list {
+	list-style: none;
+	padding: 0;
+	margin: 20px 0;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	width: 300px;
+}
+
+.task {
+	display: flex;
+	justify-content: space-between;
+	gap: 80px;
+	align-items: center;
+	padding: 10px;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	width: 200px;
+	background-color: #85a1c0;
+}
+
+.checkbox {
+	width: 20px;
+	height: 20px;
+}
+
+.label {
+	font-size: 20px;
+	color: white;
+}
